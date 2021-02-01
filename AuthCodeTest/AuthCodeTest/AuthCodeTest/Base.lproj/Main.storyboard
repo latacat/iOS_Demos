@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4kY-7o-Hn4">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQo-Gg-mfg">
+                                <rect key="frame" x="153" y="433" width="108" height="30"/>
+                                <state key="normal" title="进入倒计时页面"/>
+                                <connections>
+                                    <segue destination="OGy-Lj-uj7" kind="show" id="ft6-eE-KaW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DQo-Gg-mfg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BNe-G9-Oaf"/>
+                            <constraint firstItem="DQo-Gg-mfg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Wnb-R2-26o"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ypD-S8-yn0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1050.7246376811595" y="138.61607142857142"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="YmN-ba-dX8">
+            <objects>
+                <viewController id="OGy-Lj-uj7" customClass="LoginViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VZ6-83-9Bb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcl-n8-OO9">
+                                <rect key="frame" x="161" y="431" width="92" height="34"/>
+                                <state key="normal" title="获取验证码">
+                                    <color key="titleColor" systemColor="systemBlueColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendSMSAction:" destination="OGy-Lj-uj7" eventType="touchUpInside" id="4Rz-Mt-fJu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GB4-9g-JjW">
+                                <rect key="frame" x="176" y="485" width="62" height="30"/>
+                                <state key="normal" title="登录操作"/>
+                                <connections>
+                                    <action selector="loginAction:" destination="OGy-Lj-uj7" eventType="touchUpInside" id="LC6-AV-lzS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pOk-a3-Pqy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fcl-n8-OO9" firstAttribute="centerX" secondItem="VZ6-83-9Bb" secondAttribute="centerX" id="304-41-ZzU"/>
+                            <constraint firstItem="GB4-9g-JjW" firstAttribute="centerX" secondItem="VZ6-83-9Bb" secondAttribute="centerX" id="66o-vl-ymu"/>
+                            <constraint firstItem="GB4-9g-JjW" firstAttribute="top" secondItem="fcl-n8-OO9" secondAttribute="bottom" constant="20" id="GxT-nM-MpS"/>
+                            <constraint firstItem="fcl-n8-OO9" firstAttribute="centerY" secondItem="VZ6-83-9Bb" secondAttribute="centerY" id="Q2U-Tk-SCQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ygR-kV-io3"/>
+                    <connections>
+                        <outlet property="btnCountDown" destination="fcl-n8-OO9" id="5Tm-NV-C1c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2o7-PF-vQS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1919" y="141"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wgn-Tj-WdK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4kY-7o-Hn4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WhQ-sl-fdC">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ULo-3d-ILS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MRx-dr-GyO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
